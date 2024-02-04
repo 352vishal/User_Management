@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserUpsertComponent } from './component/user-upsert/user-upsert.component';
@@ -13,14 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     UserUpsertComponent,
-    UserListComponent
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()

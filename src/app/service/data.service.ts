@@ -1,30 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { data } from '../data-type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  serviceURL : string ;
 
-  constructor(private http : HttpClient) {
-    this.serviceURL = "http://localhost:3000/tasks"
+  constructor(private http: HttpClient) { }
+
+  addData(data: data) {
+    return this.http.post('http://localhost:3000/data', data);
+  }
+  usersList() {
+    return this.http.get<data[]>('http://localhost:3000/data');
+  }
+  deleteData(id: number) {
+    return this.http.delete(`http://localhost:3000/data/${id}`);
+  }
+  getData(id: string) {
+    return this.http.get<data>(`http://localhost:3000/data/${id}`);
+  }
+  updateData(data: data) {
+    return this.http.put<data>(`http://localhost:3000/data/${data.id}`,
+      data
+    );
   }
 
-  // addTask(task : Task) : Observable<Task> {
-  //   return this.http.post<Task>(this.serviceURL,task);
-  // }
-
-  // getAllTask() : Observable<Task[]> {
-  //   return this.http.get<Task[]>(this.serviceURL);
-  // }
-
-  // deleteTask(task : Task) : Observable<Task> {
-  //   return this.http.delete<Task>(this.serviceURL+'/'+task.id);
-  // }
-
-  // editTask(task : Task) : Observable<Task> {
-  //   return this.http.put<Task>(this.serviceURL+'/'+task.id,task);
-  // }
 }
