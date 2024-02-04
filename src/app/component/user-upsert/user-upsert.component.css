@@ -1,0 +1,92 @@
+/* style.css */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #f3f3f3;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    /* width: 500px; */
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  h1 {
+    color: #4caf50;
+  }
+  
+  label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  #pass {
+    color: red;
+    font-size: 12px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* test code */
+
+  .btn--form {
+    background-color: #f0786f;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 8px;
+  }
+  
+  .btn,
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+  }
+
+  
+  .btn--form:hover {
+    background-color: #fdf2e9;
+    color: #f48982;
+  }

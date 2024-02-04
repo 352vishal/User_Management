@@ -1,0 +1,49 @@
+
+  <div class="container">
+    <div class="row">
+    </div><div class="main">
+      <h1>User Management System</h1>
+
+      <form [formGroup]="userData" (ngSubmit)="getValue()">
+        
+        <label for="first">First Name:</label>
+        <span style="color: red;" *ngIf="first && first.invalid && first.touched">This field is not valid</span>
+        <input #task type="text" id="first" name="first" placeholder="Enter your first name" required formControlName="first">
+        
+        <label for="first">Last Name:</label>
+        <span style="color: red;" *ngIf="last && last.invalid && last.touched">This field is not valid</span>
+        <input type="text" id="last" name="last" placeholder="Enter your last name" required formControlName="last">
+
+        <label for="first">Address:</label>
+        <span style="color: red;" *ngIf="address && address.invalid && address.touched">This field is not valid</span>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required formControlName="address">
+
+        <label for="email">Email:</label>
+        <span style="color: red;" *ngIf="email && email.invalid && email.touched">This field is not valid</span>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required formControlName="email">
+
+        <label for="contact">Contact:</label>
+        <span style="color: red;" *ngIf="contact && contact.invalid && contact.touched">This field is not valid</span>
+        <input type="contact" id="contact" name="contact" placeholder="Enter your contact number" required formControlName="contact">
+
+       <button class="btn btn--form" type="submit" [disabled]="userData.invalid" (click)="listItems(task.value)"> Submit </button>
+      </form>
+
+    </div>
+
+
+
+    <!-- new code -->
+
+      <!-- to-do list mini project just for prectice -->
+      <!-- <h1>To Do List</h1>
+      <input type="text" placeholder="Type your to-do items" #task>
+      <br><br>
+      <button (click)="listItems(task.value)">Add Task</button> -->
+      <br><br>
+      <ul *ngFor="let item of list" style="list-style: none;">
+          <li>{{item.name}} <button (click)="removeItem(item.id)">Remove Task</button></li>
+          <li>{{item.first}} <button (click)="removeItem(item.id)">Remove Task</button></li>
+      </ul>
+    </div>
+
