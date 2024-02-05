@@ -7,12 +7,14 @@ import { UserListComponent } from './component/user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditComponent } from './component/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserUpsertComponent,
     UserListComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

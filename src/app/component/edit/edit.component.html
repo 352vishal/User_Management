@@ -1,0 +1,20 @@
+<div class="container">  
+    <form id="contact" #addData="ngForm" (ngSubmit)="submit(addData.value)">
+      <p class="message-p">{{userMessage}}</p>
+      <h3>Update Information</h3>
+      <h4>Edit Your Information</h4>
+      <label for="first">First Name:</label>&nbsp;&nbsp;
+      <input type="text" class="form-input" placeholder="First Name" name="first" ngModel="{{userData?.first}}" /> <br>
+      <label for="first">Last Name:</label>&nbsp;&nbsp;
+      <input type="text" class="form-input" placeholder="Last name" name="last" ngModel="{{userData?.last}}"/> <br>
+      <label for="first">Address:</label>&nbsp;&nbsp;
+      <textarea type="text" class="form-input" placeholder="Address" name="address" ngModel="{{userData?.address}}"></textarea>
+      <label for="first">Email:</label>&nbsp;&nbsp;
+      <input type="email" class="form-input" placeholder="Email" name="email" ngModel="{{userData?.email}}" /> <br>
+      <label for="first">Contact:</label>&nbsp;&nbsp;
+      <input type="text" class="form-input" placeholder="Contact" name="contact" ngModel="{{userData?.contact}}" /> <br>
+  
+        <button class="form-button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Update</button>
+    </form>
+  </div>
+

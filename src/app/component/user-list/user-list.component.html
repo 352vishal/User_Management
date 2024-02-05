@@ -31,7 +31,7 @@
                       <td>{{ item.contact }}</td>                        
                       <td>
                         <a (click)="deleteData(item.id)">Delete</a>
-                        <a routerLink="/">Edit</a>
+                        <a class="adjust-update-link" routerLink="/edit/{{item.id}}">Edit</a>
                       </td>
                   </tr>
               </tbody>
