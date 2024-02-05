@@ -8,26 +8,22 @@ import { DataService } from '../../service/data.service';
   styleUrl: './user-list.component.css'
 })
 export class UserListComponent implements OnInit{
+  // user list property to get data
   usersList: undefined | data[];
-  userMessage: undefined | string;
 
-  
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
   this.list();
   }
 
+  // deleteData function using in Data Service
   deleteData(id: number) {
     this.data.deleteData(id).subscribe((result) => {
       if (result) {
-        this.userMessage = 'Data is deleted';
         this.list();
       }
     });
-    setTimeout(() => {
-      this.userMessage = undefined;
-    }, 3000);
   }
 
   list(){

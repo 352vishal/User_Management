@@ -10,7 +10,9 @@ import { data } from '../../data-type';
 })
 export class EditComponent implements OnInit{
 
+// ngModule Data Update Filed Property
   userData: undefined | data
+// Information Update popup message Property
   userMessage: undefined | string;
   
   constructor(private route: ActivatedRoute, private data: DataService) { }

@@ -1,5 +1,10 @@
+<!-- User Add Information Html -->
+
 <div class="container">
+
+  <!-- Using Reactive for validation input fileds  -->
     <form id="contact" #addData="ngForm" (ngSubmit)="submit(addData.value)" [formGroup]="userData" (ngSubmit)="getValue()">
+      <!-- Information Added popup message  -->
       <p class="message-p">{{addUserMessage}}</p>
       <h3>User Management</h3>
       <h4>Add your all required Details</h4>

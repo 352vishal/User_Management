@@ -176,3 +176,6 @@ table.table .avatar {
 .trash-color{
   color: #ff5b5b;
 }
+.user{
+  cursor: pointer;
+}

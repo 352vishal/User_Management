@@ -10,7 +10,10 @@ import { data } from '../../data-type';
   styleUrl: './user-upsert.component.css'
 })
 export class UserUpsertComponent implements OnInit{
+  // Information Added Property
   addUserMessage: string | undefined;
+
+  // Reactive form validation fileds
 
   // control all form 
   userData= new FormGroup({
@@ -24,7 +27,8 @@ export class UserUpsertComponent implements OnInit{
   
   
   })
-  
+  // get value of reactive form input fileds
+
   getValue(){
   
     console.warn(this.userData.value)
@@ -50,6 +54,8 @@ export class UserUpsertComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  // Submit function to sumbit data on user list
+  
   submit(data: data) {
     this.data.addData(data).subscribe((result) => {
       console.warn(result)

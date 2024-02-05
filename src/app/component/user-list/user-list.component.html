@@ -1,3 +1,5 @@
+<!-- User List Data Html -->
+
 <div class="container-xl">
   <div class="table-responsive">
       <div class="table-wrapper">
@@ -5,7 +7,6 @@
               <div class="row">
                   <div class="col-sm-5">
                       <h2>User Data <b>List</b></h2>
-                      <p class="message-p">{{ userMessage }}</p>
                   </div>
               </div>
           </div>
@@ -30,8 +31,10 @@
                       <td>{{ item.email }}</td>                  
                       <td>{{ item.contact }}</td>                        
                       <td>
-                        <a (click)="deleteData(item.id)">Delete</a>
-                        <a class="adjust-update-link" routerLink="/edit/{{item.id}}">Edit</a>
+                        <!-- Delete Button to Delete Data -->
+                        <a class="user" (click)="deleteData(item.id)">Delete</a>
+                        <!-- Edit Button to Edit Information -->
+                        <a class="user" class="adjust-update-link" routerLink="/edit/{{item.id}}">Edit</a>
                       </td>
                   </tr>
               </tbody>
