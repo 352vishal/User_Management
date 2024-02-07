@@ -34,7 +34,7 @@ export class EditComponent implements OnInit{
     }
     this.data.updateData(data).subscribe((result) => {
       if (result) {
-        this.userMessage = "Product has updated"
+        this.userMessage = "Information has updated"
       }
     })
     setTimeout(() => {
